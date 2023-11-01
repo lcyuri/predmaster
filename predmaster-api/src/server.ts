@@ -7,7 +7,7 @@ import alarmController from './controllers/alarmController.js';
 import { connect, close } from './data/mongo.js';
 
 const server = express();
-const port = 8888;
+const port = process.env.PORT || 8888;
 
 server.use(express.json());
 server.use(userController);
